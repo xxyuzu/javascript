@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問題０１</title>
+</head>
+
+<body>
+
+    <body>
+        <div>
+            <button id="red">ff0000</button>
+            <button id="green">00ff00</button>
+            <button id="blue">0000ff</button>
+        </div>
+
+        <script>
+            const redBtn = document.getElementById('red');
+            console.log(redBtn.innerHTML);
+            redBtn.addEventListener('click', function () {
+                document.body.style.backgroundColor = `#${redBtn.innerHTML}`;
+
+            });
+        </script>
+    </body>
+</body>
+
+</html>
