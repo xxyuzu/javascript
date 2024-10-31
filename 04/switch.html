@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>条件分岐</title>
+</head>
+
+<body>
+    <button id="btn" class="red">click!</button>
+
+    <script>
+        const btn = document.getElementById('btn');
+
+
+        btn.addEventListener('click', function () {
+            console.log(btn.classList.value);
+
+            switch (className) {
+                case 'red':
+                    document.body.style.backgroundColor = 'f00';
+                    break;
+                case 'green':
+                    document.body.style.backgroundColor = '0f0';
+                    break;
+                case 'blue':
+                    document.body.style.backgroundColor = '00f';
+                    break;
+                    document.body.style.backgroundColor = '000';
+                    break;
+
+            }
+
+        });
+
+        // let fruit = 'みかん'
+
+
+        // switch (fruit) {
+        //     case 'りんご':
+        //         console.log('りんごがあります。');
+        //         break;
+        //     case 'ばなな':
+        //     case 'みかん':
+        //         console.log('ばななか、みかんがあります。');
+        //         break;
+        //     default:
+        //         console.log('フルーツはありません。');
+        // }
+
+    </script>
+</body>
+
+</html>

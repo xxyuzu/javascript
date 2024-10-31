@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじ</title>
+</head>
+
+<body>
+    <button id="btn">占う</button>
+    <p><img id="result" src="https://trident.takagino.net/doc2024/javascript/assets/04/omikuji/omikuji.png" alt="占う">
+    </p>
+    <p id="message">何か一言が表示されます。</p>
+    <script>
+        const path = 'https://trident.takagino.net/doc2024/javascript/assets/04/omikuji/'
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function () {
+            let num = Math.floor(Math.random() * 5);
+            console.log(num);
+
+
+            switch (num) {
+                case 0:
+                    result.setAttribute('src', `${path}daikichi.png`);
+
+                    message.innerHTML = 'お金を拾う';
+                    break;
+
+                case 1:
+                    result.setAttribute('src', `${path}chuukichi.png`);
+                    message.innerHTML = 'まあまあ';
+                    break;
+
+                case 2:
+                    result.setAttribute('src', `${path}syoukichi.png`);
+                    message.innerHTML = 'なんともいえない';
+                    break;
+
+                case 3:
+                    result.setAttribute('src', `${path}kyou.png`);
+                    message.innerHTML = 'ネイルおれる';
+                    break;
+                case 4:
+                    result.setAttribute('src', `${path}daikyou.png`);
+                    message.innerHTML = 'なんもいいことない';
+                    break;
+
+            }
+        });
+
+    </script>
+</body>
+
+</html>

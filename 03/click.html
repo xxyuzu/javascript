@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリックゲーム</title>
+</head>
+
+<body>
+    <img id="photo" src="https://trident.takagino.net/doc2024/javascript/assets/03/monster.png">
+    <p id="text">HP:10</p>
+
+    <script>
+
+        const text = document.getElementById('text');
+        const photo = document.getElementById('photo');
+
+        let count = 10;
+        text.innerHTML = `HP:${count}`;
+
+        photo.addEventListener('click', function () {
+
+            if (count > 0) {
+                text.innerHTML = `HP: ${count -= 1}`;
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
