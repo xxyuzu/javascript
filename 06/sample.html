@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配列</title>
+</head>
+
+<body>
+    <script>
+        // const fruits = ['apple', 'banana', 'orange'];
+        // console.log(fruits[3]);
+
+        // fruits[1] = 'peach';
+        // fruits[4] = 'egg';
+        // console.log(fruits.length);
+
+        // const empty = [];
+        // console.log(empty);
+
+        const fruits = ['appple', 'banana', 'orange'];
+
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(`${i}番目の値は、${fruits[i]}です。`);
+        }
+
+        const num = [5, 10, 15, 20, 25, 30];
+
+        let sum = 0;
+        // Q1
+        // for (let i = 0; i < num.length; i++) {
+        //     sum += num[i];
+        // }
+        // Q2
+        for (let i = 1; i < num.length - 1; i++) {
+            sum += num[i];
+        }
+
+        console.log(sum);
+
+
+    </script>
+</body>
+
+</html>
