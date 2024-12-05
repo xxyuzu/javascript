@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリックゲーム</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .all {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .chr {
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>click game</h1>
+    <p class="msg">クリックでモンスターを倒せ！</p>
+    <div class="all">
+        <div class="chr">
+            <img src="https://trident.takagino.net/doc/2018/javascript/data/03/images/a0.png" alt="">
+            <p>HP:10</p>
+        </div>
+        <div class="chr">
+            <img src="https://trident.takagino.net/doc/2018/javascript/data/03/images/a1.png" alt="">
+            <p>HP:10</p>
+        </div>
+        <div class="chr">
+            <img src="https://trident.takagino.net/doc/2018/javascript/data/03/images/a2.png" alt="">
+            <p>HP:10</p>
+        </div>
+    </div>
+    <script>
+        const chr = document.querySelectorAll('chr.img');
+        const msg = document.getElementById('msg');
+        const p = document.querySelectorAll('chr p');
+
+        let num = 10;
+        p.innerHTML = `HP:${num}`;
+
+
+        chr.addEventListener('click', function () {
+            if (num > 0) {
+
+                p.innerHTML = `HP${num -= 1}`;
+
+
+            }
+
+
+
+        })
+    </script>
+</body>
+
+</html>
