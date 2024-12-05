@@ -39,37 +39,40 @@
     <div class="all">
         <div class="chr">
             <img src="https://trident.takagino.net/doc/2018/javascript/data/03/images/a0.png" alt="">
-            <p>HP:10</p>
+            <p>HP:</p>
         </div>
         <div class="chr">
             <img src="https://trident.takagino.net/doc/2018/javascript/data/03/images/a1.png" alt="">
-            <p>HP:10</p>
+            <p>HP:</p>
         </div>
         <div class="chr">
             <img src="https://trident.takagino.net/doc/2018/javascript/data/03/images/a2.png" alt="">
-            <p>HP:10</p>
+            <p>HP:</p>
         </div>
     </div>
     <script>
-        const chr = document.querySelectorAll('chr.img');
-        const msg = document.getElementById('msg');
-        const p = document.querySelectorAll('chr p');
 
-        let num = 10;
-        p.innerHTML = `HP:${num}`;
+        const chr = document.querySelectorAll('.chr img');
+        const hp = document.querySelectorAll('.chr p');
+        let msg = document.querySelector('.msg');
+        let num = [];
 
+        for (let i = 0; i < chr.length; i++) {
 
-        chr.addEventListener('click', function () {
-            if (num > 0) {
+            num[i] = Math.floor(Math.random() * 5 + 5);
+            hp[i].innerHTML = "HP:" + num[i];
 
-                p.innerHTML = `HP${num -= 1}`;
+            chr[i].addEventListener('click', function () {
+                if (num[i] > 0) {
+                    num[i]--;
+                    hp[i].innerHTML = "HP:" + num[i];
+                }
 
-
-            }
-
-
-
-        })
+                if ((num[0] + num[1] + num[2]) <= 0) {
+                    msg.innerHTML = "おめでとう！"
+                }
+            });
+        }
     </script>
 </body>
 
